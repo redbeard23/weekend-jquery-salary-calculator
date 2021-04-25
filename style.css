@@ -5,5 +5,17 @@ h1 {
 }
 
 table {
+    padding: 5px;
     border: 1px solid black;
+}
+
+table td {
+    padding: 5px;
+    text-align: center;
+    width: 200px;
+    border: 1px solid black;
+}
+
+table th {
+    text-align: center;
 }
