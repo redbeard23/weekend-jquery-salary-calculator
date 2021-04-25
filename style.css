@@ -3,3 +3,7 @@ h1 {
     background-color: gray;
     padding: 25px;
 }
+
+table {
+    border: 1px solid black;
+}

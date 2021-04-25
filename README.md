@@ -3,7 +3,7 @@
 [Project Instructions](./INSTRUCTIONS.md), 
 
 What needs to be completed?
-    - create input form with employee first name, last name, ID number, job title, annual salary 
+    - create input form with employee first name, last name, ID number, job title, annual salary (done)
     - create a submit button
     - store the info to calculate monthly costs
     - appen info to DOM
