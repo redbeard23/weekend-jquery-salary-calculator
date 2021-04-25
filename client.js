@@ -1,10 +1,4 @@
-$(pacesSalaryCalculator);
-console.log('is working!');
-
-
 //first step, create employees objects with properties 
-
-
 const employees = [
 
     {
@@ -34,17 +28,15 @@ const employees = [
 ];
 
 
-    // run this function after everything is ready 
 function pacesSalaryCalculator() {
     // make a click button for the form
-    $('#add-employee').on('click', function (event) {
+    $('#submit-button').on('click', function (event) {  
         const firstName = $('#employee-firstName').val();
         const lastName = $('#employee-lastName').val();
         const id = $('#employee-id').val();
         const title  = $('#employee-title').val();
         const employeeSalary = $('#employee-employeeSalary').val();
         // call the function to append to DOM 
-        appendEmployee(firstName, lastName, id, title, employeeSalary);
 
 });
 
@@ -55,10 +47,8 @@ function pacesSalaryCalculator() {
     // loop over employees array 
 for (let i=0; i<employees.length; i++) {
 
-    // append each employee to DOM
-    let item = $('<li>employees-list</li>');
+    // append each employee to DOM and create a table
     $('#employees-list').append(`
-    <ul>
         <table>       
             <tr>
                 <th>First Name</th>
@@ -76,14 +66,27 @@ for (let i=0; i<employees.length; i++) {
                 <td>${employees[i].title}</td>
                 <td>${employees[i].annualSalary}</td>
                 <td colspan="2">
-                <button class="delete">Delete</button> 
+                <td><button class="delete">Delete</button></td>
             </tr>
                     
                 </tbody>
         </table>
-    </ul>
+    
     `);
-}
 
 }
+}
 
+// use event.target to make the delete buttons work and link it to the DOM 
+// create the button function 
+    $('#employees-list').on('click', '.remove', function (event) {
+        let deleteButtonInfo = $(event.target);
+        deleteButtonInfo.closest('ul').remove();
+    });
+
+
+
+    // run this function after everything is ready 
+
+    $(pacesSalaryCalculator);
+    console.log('is working!');
