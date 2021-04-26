@@ -1,4 +1,12 @@
+
+
+$(pacesSalaryCalculator);
+console.log('is working!');
+
+
 //first step, create employees objects with properties 
+
+
 const employees = [
 
     {
@@ -30,13 +38,14 @@ const employees = [
 
 function pacesSalaryCalculator() {
     // make a click button for the form
-    $('#submit-button').on('click', function (event) {  
+    $('#add-employee').on('click', function (event) {
         const firstName = $('#employee-firstName').val();
         const lastName = $('#employee-lastName').val();
         const id = $('#employee-id').val();
         const title  = $('#employee-title').val();
         const employeeSalary = $('#employee-employeeSalary').val();
         // call the function to append to DOM 
+        appendEmployee(firstName, lastName, id, title, employeeSalary);
 
 });
 
@@ -47,7 +56,8 @@ function pacesSalaryCalculator() {
     // loop over employees array 
 for (let i=0; i<employees.length; i++) {
 
-    // append each employee to DOM and create a table
+    // append each employee to DOM
+    let item = $('<li>employees-list</li>');
     $('#employees-list').append(`
         <table>       
             <tr>
@@ -66,25 +76,16 @@ for (let i=0; i<employees.length; i++) {
                 <td>${employees[i].title}</td>
                 <td>${employees[i].annualSalary}</td>
                 <td colspan="2">
-                <td><button class="delete">Delete</button></td>
+                <button class="delete">Delete</button> 
             </tr>
                     
                 </tbody>
         </table>
     
     `);
-
-}
 }
 
-// use event.target to make the delete buttons work and link it to the DOM 
-// create the button function 
-    $('#employees-list').on('click', '.remove', function (event) {
-        let deleteButtonInfo = $(event.target);
-        deleteButtonInfo.closest('ul').remove();
-    });
-
-
+}
 
     // run this function after everything is ready 
 
