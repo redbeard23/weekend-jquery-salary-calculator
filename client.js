@@ -1,5 +1,4 @@
 
-
 $(pacesSalaryCalculator);
 console.log('is working!');
 
@@ -35,10 +34,14 @@ const employees = [
 
 ];
 
+//create variable for total monthly salary 
+// wasn't able to figure out what to do next with this information 
+let monthlyTotal = 0;
+
 
 function pacesSalaryCalculator() {
     // make a click button for the form
-    $('#add-employee').on('click', function (event) {
+    $('#add-employee').on('click', function () {
         const firstName = $('#employee-firstName').val();
         const lastName = $('#employee-lastName').val();
         const id = $('#employee-id').val();
@@ -49,6 +52,8 @@ function pacesSalaryCalculator() {
 
 });
 
+    
+
     // empty the list items
     $('#employees-list').empty();
 
@@ -57,7 +62,6 @@ function pacesSalaryCalculator() {
 for (let i=0; i<employees.length; i++) {
 
     // append each employee to DOM
-    let item = $('<li>employees-list</li>');
     $('#employees-list').append(`
         <table>       
             <tr>
@@ -85,6 +89,8 @@ for (let i=0; i<employees.length; i++) {
     `);
 }
 
+    
+    
 }
 
     // run this function after everything is ready 
