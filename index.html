@@ -5,51 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="jquery.js"></script>
-
     <script src="client.js"></script>
-
     <link rel="stylesheet" href="style.css">
 
     <title>Weekend jQuery Salary Calculator</title>
 </head>
-<body>
 
-    <main>
+<header>
+    <h1>Salaray Calculator</h1>
+</header>
 
-    <h1>Salary Calculator</h1>
-    <h2>Add Employee</h2>
+<h2>Add Employee</h2>
 
-    
+<div>
+<form id="employeeForm">
+    <input type="text" id="firstName" placeholder="First Name">
+    <input type="text" id="lastName" placeholder="Last Name">
+    <input type="number" id="idNumber" placeholder="ID Number">
+    <input type="text" id="title" placeholder="Title">
+    <input type="number" id="annualSalary" placeholder="Annual Salary">
+    <button id="submitEmployeeInfo">Submit</button>
+</form>
+</div>
 
-    <div>
-        <input id="employee-firstName" placeholder="First Name" />
-        <input id="employee-lastName" placeholder="Last Name" />
-        <input id="employee-id" placeholder="Employee ID" />
-        <input id="employee-title" placeholder="Employee Title" />
-        <input id="employee-employeeSalary" placeholder="Employee Salary" />
-        <button id="submit-button">Submit</button>
-    </div>
-        
-    <h2>Employees</h2>
-           
-    </table>
-    <ul id ="employees-list">
-        <li class="employee-info">There is no info</li>
-        <li class="employee-info">There is no info</li>
-        <li class="employee-info">There is no info</li>
-        <li class="employee-info">There is no info</li>
-        <li class="employee-info">There is no info</li>
-        <li class="employee-info">There is no info</li>
-        <button id="delete-button">Delete</button>
-    </ul>
-    
+<table>
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Employee ID</th>
+            <th>Title</th>
+            <th>Annual Salary</th>
+            <th>Delete</th>
 
-<h3 id ="monthly-total">Total Monthly: </h3>
+        </tr>
+    </thead>
 
+</table>
 
-    
-</main>
+<h3>Total Monthly: $$$</h3>
+    </html>
 
-    
-</body>
-</html>
