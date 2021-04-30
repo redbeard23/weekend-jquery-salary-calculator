@@ -11,25 +11,45 @@
     <title>Weekend jQuery Salary Calculator</title>
 </head>
 
+<body>
+    <main>
+
 <header>
     <h1>Salaray Calculator</h1>
 </header>
 
 <h2>Add Employee</h2>
 
-<div>
-<form id="employeeForm">
-    <input type="text" id="firstName" placeholder="First Name">
-    <input type="text" id="lastName" placeholder="Last Name">
-    <input type="number" id="idNumber" placeholder="ID Number">
-    <input type="text" id="title" placeholder="Title">
-    <input type="number" id="annualSalary" placeholder="Annual Salary">
-    <button id="submitEmployeeInfo">Submit</button>
-</form>
+<div id="employeeForm">
+        <input type="text" id="firstName" placeholder="First Name">
+        <input type="text" id="lastName" placeholder="Last Name">
+        <input type="number" id="idN" placeholder="ID">
+        <input type="text" id="title" placeholder="Title">
+        <input type="number" id="annualSalary" placeholder="Annual Salary">
+    </div>
+
+<div class="buttons">
+    <button id="add-employee">Submit Employee Info</button>
 </div>
 
-<table id="employeeTable"></table>
+<h3>Employee List</h3>
 
-<h3>Total Monthly: $$$</h3>
-    </html>
+<div>
+<table id='employee-table'></table>
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Title</th>
+            <th>ID</th>
+            <th>Annual Salary</th>
+            <th></th>
+    </tr>
+</thead>
+</div>
+
+<h4>Total Monthly: $$$</h4>
+
+</body>
+</html>
 

@@ -1,4 +1,3 @@
-
 // get submit button to add employee info 
 //- store the info to calculate monthly costs
 //- appen info to DOM
@@ -6,72 +5,54 @@
 //- create a delete button 
 //- make sure info is in a table 
 
-// create array with employee info
-const employeeInfo = [
-    {
-        firstName: "",
-        lastName: "",
-        employeeID: "",
-        title: "",
-        annualSalary: ""
-    }
-];
+const myArray = [];
 
 // start project off in 
 $(document).ready(function() {
     console.log("Ready Up");
 
-// select button element and when the user clicks on the submit button 
+// select button element and when the user clicks on submit button 
 // add employee info to the table 
-$("#submitEmployeeInfo").on("click", function(event) {
-//need to target form values 
-const firstName = $("#firstName").val();
-const lastName = $("#lastName").val();
-const id = $("#idNumber").val();
-const title = $("#title").val();
-const annualSalary = $("#annualSalary").val();
-// append employee info to DOM
-addEmployee(firstName, lastName, id, title, annualSalary);
-});
+$('#add-employee').on('click', function(event) {
 
-// must clear values before putting them into table 
-$("#employeeTable").empty();
+    // need to target form values
+    const firstName = $('#firstName').val();
+    const lastName = $('#lastName').val();
+    const id = $('#id').val();
+    const title = $('#title').val();
+    const annualSalary = $('#annualSalary').val();
 
-// create for loop to go through employee info 
-for (let i=0; i < employeeInfo.length; i++) {
-// target employee header 
-addEmployee(
-    employeeInfo[i].firstName,
-    employeeInfo[i].lastName,
-    employeeInfo[i].employeeID,
-    employeeInfo[i].title,
-    employeeInfo[i].annualSalary,
-);
-}
 
-// create a new function that adds employees info to table
-function addEmployee(firstName, lastName, id, title, annualSalary) {
-    $('#employeeTable').append(`
-        <table>
-            <thead>
-                <tr>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Employee ID</th>
-                    <th>Title</th>
-                    <th>Annual Salary</th>
-                    <th>Delete</th>
-                </tr>
-                <tr>
-                    <td>${firstName}</td>
-                    <td>${lastName}</td>
-                    <td>${idNumber}</td>
-                    <td>${title}</td>
-                    <td>${annualSalary}</td>
-            </thead>
-        </table>
+// clear the form 
+    $('#firstName').val('');
+    $('#lastName').val('');
+    $('#id').val('');
+    $('#title').val('');
+    $('#annualSalary').val('');
+
+// don't forget to push them into form 
+    const newEmployee = {
+        firstName: firstName,
+        lastName: lastName,
+        id: id,
+        title: title,
+        annualSalary: annualSalary
+    }
+
+myArray.push(newEmployee);
+
+// append employee info to the table
+    $('#employee-table').append(`
+        <tr>
+            <td>${newEmployee.firstName}</td>
+            <td>${newEmployee.lastName}</td>
+            <td>${newEmployee.id}</td>
+            <td>${newEmployee.title}</td>
+            <td>${newEmployee.annualSalary}</td>
+            <td><button class="remove-employee">Delete</button>
+        </tr>
     `);
 
-}
+});
 
 });
