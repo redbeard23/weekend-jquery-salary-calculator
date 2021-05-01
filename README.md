@@ -3,13 +3,13 @@
 [Project Instructions](./INSTRUCTIONS.md), 
 
 What needs to be completed?
-    - create input form with employee first name, last name, ID number, job title, annual salary (done)
-    - create a submit button
+    - create input form with employee first name, last name, ID number, job title, annual salary [x]
+    - create a submit button [x]
     - store the info to calculate monthly costs
     - appen info to DOM
     - if total monthly cost exceeds $20,000, add red background to total monthly cost
     - create a delete button 
-    - make sure info is in a table 
+    - make sure info is in a table [x]
 
 ## Description
 
