@@ -21,34 +21,35 @@
 <h2>Add Employee</h2>
 
 <div id="employeeForm">
-        <input type="text" id="firstName" placeholder="First Name">
-        <input type="text" id="lastName" placeholder="Last Name">
-        <input type="number" id="idN" placeholder="ID">
-        <input type="text" id="title" placeholder="Title">
-        <input type="number" id="annualSalary" placeholder="Annual Salary">
-    </div>
+    <input type="text" id="firstName" placeholder="First Name">
+    <input type="text" id="lastName" placeholder="Last Name">
+    <input type="number" id="id" placeholder="ID">
+    <input type="text" id="title" placeholder="Title">
+    <input type="number" id="annualSalary" placeholder="Annual Salary">
+</div>
 
 <div class="buttons">
-    <button id="add-employee">Submit Employee Info</button>
+<button id="add-employee">Submit Employee Info</button>
 </div>
 
 <h3>Employee List</h3>
 
 <div>
-<table id='employee-table'></table>
-    <thead>
+<table id='employee-table'>
+   
         <tr>
             <th>First Name</th>
             <th>Last Name</th>
             <th>Title</th>
             <th>ID</th>
             <th>Annual Salary</th>
-            <th></th>
     </tr>
-</thead>
+
+</table>
+
 </div>
 
-<h4>Total Monthly: $$$</h4>
+<h4>Total Monthly Salary: $<span id="totalMonthly"></span></h4>
 
 </body>
 </html>

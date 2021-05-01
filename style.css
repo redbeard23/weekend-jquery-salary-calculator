@@ -8,27 +8,6 @@ h2 {
     text-align: center;
 }
 
-div {
-    padding: 10px;
-    text-align: center;
-}
-
-table {
-    width: 100%;
-    border: 1px solid black;
- }
- 
- table tr {
-     text-align: center;
-    padding: 5px;
- }
- 
- table thead tr {
-     text-align: center;
-    background-color: #50BFE6;
-    color: white;
- }
-
 h3{
     text-align: center;
 }
@@ -36,6 +15,29 @@ h4 {
     text-align: right; 
 
 }
+
+div {
+    padding: 10px;
+    text-align: center;
+}
+
+table, td, th {  
+    border: 1px solid #ddd;
+    text-align: left;
+    text-align: center;
+    background-color: gray;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    padding: 15px;
+  }
+ 
+
 
 
 

@@ -6,6 +6,7 @@
 //- make sure info is in a table 
 
 const myArray = [];
+let totalSalary = 0;
 
 // start project off in 
 $(document).ready(function() {
@@ -40,6 +41,8 @@ $('#add-employee').on('click', function(event) {
     }
 
 myArray.push(newEmployee);
+totalSalary += annualSalary;
+
 
 // append employee info to the table
     $('#employee-table').append(`
@@ -48,11 +51,20 @@ myArray.push(newEmployee);
             <td>${newEmployee.lastName}</td>
             <td>${newEmployee.id}</td>
             <td>${newEmployee.title}</td>
-            <td>${newEmployee.annualSalary}</td>
-            <td><button class="remove-employee">Delete</button>
+            <td class='employee-salary'>${newEmployee.annualSalary}</td>
+]           <td><button class="remove-employee">Delete</button>
+
         </tr>
     `);
-
+updateSalary();
 });
+
+function updateSalary() {
+// divide salary by 12
+    const monthlySalary = annualSalary / 12;
+    if (Number(monthlySalary) > 20000) {}
+
+    
+}
 
 });
